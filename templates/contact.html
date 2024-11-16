@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #002855;
+            display: flex;
+            justify-content: center;
+            padding: 6%;
+            margin: 0;
+            height: 75vh;
+            background: linear-gradient(120deg, #82bee5, #c895de);
+            animation: backgroundAnimation 10s ease infinite;    display: flex;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(120deg, #2980b9, #8e44ad); }
+            50% { background: linear-gradient(120deg, #8e44ad, #e74c3c); }
+            100% { background: linear-gradient(120deg, #2980b9, #8e44ad); }
+        }
+        .container {
+            background-color: #67c1d6;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px black;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .contact-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .contact-info div {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+        }
+        .contact-info div:first-child {
+            margin-left: 0;
+        }
+        .contact-info div:last-child {
+            margin-right: 0;
+        }
+        .contact-info h4 {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 0;
+            border: none;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: larger;
+            font-weight: 600;
+        }
+        .submit-btn:hover {
+            background-color: #43cb43;
+        }
+          </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-header">Contact Us</div>
+        <div class="contact-info">
+            
+            <div>
+                <h4>PHONE NUMBER</h4>
+                <a href="#">1234567890</a>
+            </div>
+            
+            <div>
+                <h4>EMAIL</h4>
+                <a href="#">abc@gmail.com</a>
+            </div>
+        </div>
+        <form onsubmit="return handleSubmit()">
+            <div class="form-group">
+                <input type="text" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Enter a valid email address" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script>
+        function handleSubmit() {
+            alert("Form submitted successfully!");
+            return false; 
+        }
+    </script>
+</body>
+</html>

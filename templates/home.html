@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    animation: backgroundAnimation 10s ease infinite;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.animated-heading {
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease forwards, slideIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(0); }
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease forwards;
+    opacity: 0;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    animation: fadeIn 4s ease forwards;
+    opacity: 0;
+}
+
+.cta-button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px ;
+    color: white;
+}
+.hero-image{
+  
+    animation: fadeIn 2s ease forwards, slideIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(0); }
+}
+
+button{
+  animation: fadeIn 2s ease forwards, slideIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(0); }
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px black;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+@keyframes backgroundAnimation {
+  
+    0% {background: linear-gradient(90deg, rgba(161,97,203,1) 0%, rgba(253,29,218,1) 50%, rgba(219,156,66,1) 100%);
+    }
+    50% { background: linear-gradient(120deg, #8e44ad, #e74c3c); }
+    100% { background: linear-gradient(120deg, #2980b9, #8e44ad ,rgba(219,156,66,1) 100%); }
+}
+</style>
+<body>
+  <section class="home">
+    <div class="container">
+      <h1 class="animated-heading">Welcome To Plant Disease
+        Detection</h1>
+      <a href="/index">
+        <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+      </a>
+    </div>
+    <div class="hero-image">
+      <img src="/static/uploads/plant1.png" alt="Plant Image">
+    </div>
+  </section>
+    
+</body>
+  
+
+{% endblock body %}

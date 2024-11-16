@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #82bee5, #c895de);
+    animation: backgroundAnimation 10s ease infinite;    display: flex;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 10px 30px black;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(120deg, #2980b9, #8e44ad); }
+    50% { background: linear-gradient(120deg, #8e44ad, #e74c3c); }
+    100% { background: linear-gradient(120deg, #2980b9, #8e44ad); }
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p style="padding-top: 15px; ">Don't have account yet? <a href="/register" style="text-decoration: none;">Sign Up</a></p>
+
+        </form>
+        
+    </div>
+    <script src="../static/login.js"></script>
+    
+    
+</body>
+</html>
+
+    

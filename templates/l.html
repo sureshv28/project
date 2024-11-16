@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: black;
+        }
+        .wrapper{width: 100%;overflow: hidden;background: #faf7ef;}
+        .fluid-container{width: 100%;max-width: 1280px;margin: 0 auto;padding: 0 20px;}
+        .slider-main.index-slider {position: relative;}
+.swiper.mySwiper {position: relative;height: calc(100vh - 77px);}
+.swiper.mySwiper .swiper-wrapper .swiper-slide {background: no-repeat center center/cover;height: calc(100vh - 77px); position: relative;z-index: 0;display: flex;align-items: center;justify-content: center;flex-direction: column;position: relative;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide::before {content: ""; position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: var(--dark-green);opacity: .6;z-index: -1;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide::after {content: "";position: absolute;background: var(--dark-green);top: 0;width: 100%;max-width: 500px;height: 100%;opacity: .8;z-index: 0;left: 10%;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide .banner-text {position: relative;z-index: 1;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide .banner-text h3 {width: 100%;max-width: 500px;color: #fff;font-weight: 400;font-size: 40px;padding: 20px 0;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide .banner-text span {display: flex;justify-content: flex-start;align-items: center;position: relative;}
+.swiper.mySwiper .swiper-wrapper .swiper-slide .banner-text span img {width: 100%;max-width: 500px;} 
+
+
+.slides-numbers {position: absolute;top: 30%;right: 20%;display: flex;flex-direction: column;justify-content: center;align-items: center;z-index: 1;margin: auto;height: 50%;}
+.slides-numbers::before {content: '';position: absolute;background: #fff;width: 2px;height: 100%;right: -38px;top: 0;bottom: 0;margin: auto;}
+.slides-numbers a {color: #fff;font-size: 36px;margin: 30px 0;display: flex;justify-content: space-between;align-items: center;gap: 30px;}
+.slides-numbers a span {display: flex;justify-content: center;align-items: center;width: 40px;height: 40px;border: 2px solid #fff;border-radius: 50%;background: #fff;display: none;}
+.slides-numbers a.slide-number.active span  {display: block;}
+.slides-numbers a span img{width: 20px;filter: invert(84%) sepia(21%) saturate(4242%) hue-rotate(340deg) brightness(107%) contrast(94%);transform: rotate(-35deg);position: relative;bottom: 12px;right: -7px;}
+.slide-number {margin: 0 10px;transition: transform 0.3s;}
+.slide-number.top {opacity: 0.5;}
+.slide-number.bottom {opacity: 0.5;}
+.slides-numbers a.hidden {display: none; /* Hide non-active slide numbers */}
+.slide-number.active {font-weight: bold;}
+.slides-numbers a.active {opacity: 1; /* Ensure active slide number is visible */}
+.slide-number {position: absolute;transition: transform 0.3s ease;}
+.slide-number.top {transform: translateY(-10%);top: 0;}
+.slide-number.active {transform: translateY(0);margin: auto;}
+.slide-number.bottom {transform: translateY(10%);bottom: 0;}
+.slide-number.hidden {display: none;}
+    </style>
+</head>
+<body>
+       <!-- banner section starts here  -->
+       <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1" data-slide="0" style="background-image: url('./images/banners/banner-1.webp');">
+                <div class="fluid-container">
+                    <div class="banner-text">
+                        <span><img src="/static/uploads/leaf-spot-fungus.webp" alt="organismic-banner-logo"></span>
+                        <h3>"Responsible Agriculture for Sustainable Future"</h3>
+                        <div class="common-btn">
+                            <a href="about-us">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide2" data-slide="1" style="background-image: url('./images/banners/home-banner-2.webp');">
+                <div class="fluid-container">
+                    <div class="banner-text">
+                        <span><img src="/static/uploads/leaf-spot-fungus.webp"  alt="organismic-banner-logo"></span>
+                        <h3>"Innovative Solutions for Sustainable Agriculture"</h3>
+                        <div class="common-btn">
+                            <a href="research-and-development">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide3" data-slide="2" style="background-image: url('./images/banners/home-banner-1.webp');">
+                <div class="fluid-container">
+                    <div class="banner-text">
+                        <span><img src="/static/uploads/leaf-spot-fungus.webp"  alt="organismic-banner-logo"></span>
+                        <h3>"Empowering Farmers, Nurturing Tomorrow"</h3>
+                        <div class="common-btn">
+                            <a href="flagship-products">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide" data-slide="3" style="background-image: url('./images/banners/home-banner-1.webp');">
+                <div class="fluid-container">
+                    <div class="banner-text">
+                        <span><img src="./images/logo/organismic-banner-logo.webp" alt="organismic-banner-logo"></span>
+                        <h3>"Empowering Farmers, Nurturing Tomorrow"</h3>
+                        <div class="common-btn">
+                            <a href="about-us">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    
+        <div class="slides-numbers">
+            <a href="javascript:;" class="slide-number" data-slide="0">01 <span><img src="./images/icons/arrow-1.png" alt="An Icon of Arrow"></span></a>
+            <a href="javascript:;" class="slide-number" data-slide="1">02 <span><img src="./images/icons/arrow-1.png" alt="An Icon of Arrow"></span></a>
+            <a href="javascript:;" class="slide-number" data-slide="2">03 <span><img src="./images/icons/arrow-1.png" alt="An Icon of Arrow"></span></a>
+            <!-- <a href="javascript:;" class="slide-number" data-slide="3">04 <span><img src="./images/icons/arrow-1.png" alt="An Icon of Arrow"></span></a> -->
+        </div>
+        
+        
+    </section>
+    <script>
+        function getAbsoluteFile() {
+    {
+        return window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+    }
+}
+
+$(document).ready(function () {
+    var page = getAbsoluteFile();
+    // conditions for home page
+    if (page == '' || page == 'index') {
+        $('.home-link').addClass("act-link");
+        $('.resp-home').addClass("act-link");
+        $('.footer-home').addClass("act-link");
+    }
+    // conditions for home page
+
+    // conditions for inner pages
+    else {
+        // nav active links
+        $('.right-desktop-menu-container li a[href="' + page + '"]').addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().prev().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().prev().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        $('.right-desktop-menu-container li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        // nav active links
+
+        // footer active links
+        $('.footer-links li a[href="' + page + '"]').addClass('act-link');
+        $('.footer-links li a[href="' + page + '"]').parent().addClass('act-link');
+        $('.footer-links li a[href="' + page + '"]').parent().parent().prev().addClass('act-link');
+        // footer active links
+
+        // res nav activ link
+        $('.desk-ham-menu li a[href="' + page + '"]').addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().parent().prev().addClass('act-link');
+
+        $('.nav-dropdown a[href="' + page + '"]').addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().prev("a").addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().parent().parent().parent().prev("a").addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().parent().parent().parent().parent().prev("a").parent().addClass('act-link');
+        $('.nav-dropdown li a[href="' + page + '"]').parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass('act-link');
+        // res nav activ link
+
+    }
+    // conditions for inner pages
+});
+// active links code
+
+
+
+// Responsive-menu
+$(document).ready(function () {
+    $('.desk-resp-ham ul.toggle-desk').click(function () {
+        $(this).toggleClass('active');
+        $('.desk-resp-ham .sidebar').toggleClass('active');
+        $('body').toggleClass('hc-nav-open');
+        $('.section-new').toggleClass('act-section');
+    })
+});
+
+$('.section-new').click(function () {
+    $('.desk-resp-ham ul.toggle-desk').toggleClass('active');
+    $('.desk-resp-ham .sidebar').toggleClass('active');
+    $('.section-new').toggleClass('act-section');
+});
+
+(function ($) {
+    $(function () {
+        $('.desk-ham-menu > li > span:not(:only-child)').click(function (e) {
+            $(this).siblings('.nav-dropdown').toggle(200);
+
+            $('.nav-dropdown').not($(this).siblings()).hide(300);
+            e.stopPropagation();
+        });
+
+        $('.nav-dropdown li span:not(:only-child)').click(function (e) {
+            $(this).siblings('.nav-dropdown-1').toggle(200);
+            $('.desk-ham-menu > li span:not(:only-child)').show()
+            $('.nav-dropdown-1').not($(this).siblings()).hide(300);
+            e.stopPropagation();
+        });
+
+        $('html').click(function () {
+            $('.nav-dropdown').hide(200);
+            $('.nav-dropdown-1').hide();
+        });
+    });
+})(jQuery);
+// Responsive-menu
+
+
+// Form
+function ValidationContact() {
+    //1. name
+    var x = document.forms['valid']['txtName'];
+    var y = x.value;
+    if (y == "") {
+        alert('Please Enter Your Name....');
+        x.focus();
+        return false;
+    }
+    var reg = /^[ a-zA-Z]*$/;
+    if (reg.test(y) == false) {
+        alert('Invalid Name! Please Enter only Alphabets....');
+        x.focus();
+        return false;
+    }
+    // name	
+
+    //  phone number
+    var x = document.forms['valid']['txtPhone'];
+    var y = x.value;
+    if (y == "") {
+        alert("Please Enter Your Phone Number...");
+        x.focus();
+        return false;
+    } else if (y.match(/[^\d+]/)) {
+        alert('Please Enter Only Numbers/Correct Contact Number....');
+        x.focus();
+        return false;
+    }
+    if (y.length < 10) {
+        alert("Please Enter atleast 10-15 digit Contact Number....");
+        return false;
+    } else if (y < 1 || y.match(/\s/) || y.match(/\+/)) {
+        alert('Invalid Contact Number !  Please Enter Your Correct Contact Number.... !');
+        x.focus();
+        return false
+    }
+    // phone number
+
+    //  mail
+    
+     var x = document.forms['valid']['txtEmail'];
+    var y = x.value;
+    if (y == "") {
+        alert('Please Enter Your Email-Id....');
+        x.focus();
+        return false;
+    } else {
+        var reg = /^[A-Za-z]+[A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (reg.test(y) == false) {
+            alert('Invalid Email Address....');
+            x.focus();
+            return false;
+        }
+    }
+    // mail
+
+    // message
+    var x = document.forms['valid']['txtMessage'];
+    var y = x.value;
+    if (y == "") {
+        alert('Please Enter Your Message....');
+        x.focus();
+        return false;
+    }
+
+    $('[name="submit"]').hide();
+    alert('Thank you for your interest, our team will get back to you soon!');
+
+    return true;
+}
+// Form
+    </script>
+</body>
+</html>
